@@ -9,8 +9,8 @@ use modules::prelude::*;
 
 #[tokio::main]
 async fn main() -> Result<()> {
-  let opts: Opts = Opts::parse();
-  let _ = setup_logger();
+  let opts = Opts::parse();
+  let _ = setup_logger(opts.log_level());
 
   Bastion::init();
   Bastion::start();
@@ -69,7 +69,7 @@ async fn main() -> Result<()> {
               name = Some(content);
             }
             Some(name) => {
-              info!("[{}] <{}> {}", msg.from, name, content);
+              print!("[{}] <{}> {}", msg.from, name, content);
             }
           }
         }
