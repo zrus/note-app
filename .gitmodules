@@ -1,0 +1,6 @@
+[submodule "hypercore"]
+	path = hypercore
+	url = https://github.com/zrus/hypercore.git
+[submodule "hypercore-protocol-rs"]
+	path = hypercore-protocol-rs
+	url = https://github.com/zrus/hypercore-protocol-rs.git
